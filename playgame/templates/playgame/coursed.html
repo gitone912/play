@@ -1,0 +1,47 @@
+{% extends 'playgame/home.html' %}
+{% load embed_video_tags %}
+{% block content %}
+
+<a href="">back</a>
+<div>
+
+    {{display.course_name}}=
+</div>
+ <div>
+    <table>
+        
+        {% for x in display.display.all  %}
+        <tr>
+                <form action="/adk">
+
+                    <input type="hidden" name='prod_id' value={{x.id}}
+                    id="prod_id">
+                    <button type="submit">click</button>
+                </form>
+click to go
+                <th>
+                    {{x.cname}}
+                </th>
+            </a>
+<th>
+    
+    {{x.level}}
+</th>
+<th>
+    
+    {{x.duration}}
+</th>
+<th>
+
+    {{x.id}}
+</th>
+
+</tr>
+    {% endfor %}
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/F5tSoaJ93ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</table>
+<iframe width="560" height="315" src="{{x.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+{% endblock content %}

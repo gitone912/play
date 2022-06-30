@@ -1,0 +1,35 @@
+{% extends 'playgame/home.html' %}
+{% block content %}
+<h1>none</h1>
+
+
+<table>
+    {% for i in data %}
+    <tr>
+        
+        
+        <th>
+            
+            course id
+        </th>
+        <th>
+            course deials
+        </th>
+    </tr>
+    <tr>
+        <td>
+
+            <a href="">
+                {{i.id}}
+            </a>
+        </td>
+        <td>
+            <a href=" {% url 'details' courses_id=i.id %} ">
+                {{i.course_name}}
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+   
+</table>
+            {% endblock content %}

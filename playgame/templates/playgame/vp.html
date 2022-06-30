@@ -1,0 +1,20 @@
+{% load embed_video_tags %}
+<h1>
+    its vp
+
+
+</h1>
+
+
+<div>
+    {% for x in a.display.all  %}
+    <div>
+
+        {%video x.link '426x240' %}
+    </div>
+    <div>
+    {{x.title}}
+    </div>
+    {% endfor %}
+    
+</div>
